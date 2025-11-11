@@ -1,0 +1,147 @@
+# 内容：海外Ai
+
+
+# IP段匹配
+# IP-CIDR：基于 IP 网段的规则，通过 CIDR（无类域间路由）方式匹配 IP。
+# 13.32.0.0/15：匹配该 IP 段中所有主机。
+# no-resolve：不通过 DNS 反查域名，直接按 IP 匹配。
+# 优点：速度更快，不受 DNS 污染影响。
+# 缺点：域名变化时可能无法命中。
+# IP-CIDR,
+IP-CIDR,104.18.0.0/16,no-resolve
+IP-CIDR,172.64.0.0/16,no-resolve
+IP-CIDR,13.64.0.0/11,no-resolve
+IP-CIDR,20.0.0.0/11,no-resolve
+IP-CIDR,40.64.0.0/10,no-resolve
+IP-CIDR,52.96.0.0/12,no-resolve
+IP-CIDR,64.233.160.0/19,no-resolve
+IP-CIDR,66.102.0.0/20,no-resolve
+IP-CIDR,72.14.192.0/18,no-resolve
+IP-CIDR,74.125.0.0/16,no-resolve
+IP-CIDR,108.177.0.0/17,no-resolve
+IP-CIDR,142.250.0.0/15,no-resolve
+IP-CIDR,172.217.0.0/16,no-resolve
+IP-CIDR,209.85.128.0/17,no-resolve
+IP-CIDR,216.58.192.0/19,no-resolve
+IP-CIDR,104.16.0.0/13,no-resolve
+IP-CIDR,172.64.0.0/14,no-resolve
+IP-CIDR,20.0.0.0/11,no-resolve
+IP-CIDR,40.64.0.0/10,no-resolve
+IP-CIDR,52.96.0.0/12,no-resolve
+IP-CIDR,104.16.0.0/13,no-resolve
+IP-CIDR,199.59.148.0/22,no-resolve
+IP-CIDR,104.18.0.0/16,no-resolve
+IP-CIDR,54.160.0.0/12,no-resolve
+IP-CIDR,52.200.0.0/13,no-resolve
+IP-CIDR,52.4.0.0/14,no-resolve
+IP-CIDR,162.159.128.0/17,no-resolve
+IP-CIDR,104.16.0.0/13,no-resolve
+IP-CIDR,3.0.0.0/9,no-resolve
+IP-CIDR,18.0.0.0/8,no-resolve
+IP-CIDR,52.0.0.0/9,no-resolve
+IP-CIDR,104.16.0.0/13,no-resolve
+IP-CIDR,18.160.0.0/14,no-resolve
+
+
+# 进程名匹配
+# 匹配包名对应的进程，通常用于 Android（Surge/Clash for Android）或 Windows（Clash Meta）。
+# 命中这个进程的所有流量都按这一规则处理。
+# PROCESS-NAME,
+
+
+# 完整域名精确匹配
+# DOMAIN,
+DOMAIN,api.openai.com
+DOMAIN,auth0.openai.com
+DOMAIN,api.anthropic.com
+DOMAIN,api.x.ai
+DOMAIN,api.perplexity.ai
+DOMAIN,api.meta.ai
+DOMAIN,api.stability.ai
+DOMAIN,api.runwayml.com
+DOMAIN,api.elevenlabs.io
+DOMAIN,api.replicate.com
+DOMAIN,api.cohere.ai
+DOMAIN,api.mistral.ai
+
+
+# 域名关键字匹配
+# DOMAIN-KEYWORD,
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,googleai
+DOMAIN-KEYWORD,gemini
+DOMAIN-KEYWORD,googleapis
+DOMAIN-KEYWORD,ai.google
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,azureopenai
+DOMAIN-KEYWORD,azure-api
+DOMAIN-KEYWORD,openai.azure
+DOMAIN-KEYWORD,xai
+DOMAIN-KEYWORD,grok
+DOMAIN-KEYWORD,perplexity
+DOMAIN-KEYWORD,pplx
+DOMAIN-KEYWORD,huggingface
+DOMAIN-KEYWORD,hf.space
+DOMAIN-KEYWORD,discord
+DOMAIN-KEYWORD,runway
+DOMAIN-KEYWORD,elevenlabs
+
+
+# 域名后缀匹配
+# DOMAIN-SUFFIX,
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openaiapi.akamaized.net
+DOMAIN-SUFFIX,blob.core.windows.net
+DOMAIN-SUFFIX,google.ai
+DOMAIN-SUFFIX,google.dev
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,clients6.google.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,aiplatform.googleapis.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,openai.azure.com
+DOMAIN-SUFFIX,azure.com
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,ai.azure.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.x.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,pplx.ai
+DOMAIN-SUFFIX,pplx-res.cloudinary.com
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,llama.meta.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,huggingface.io
+DOMAIN-SUFFIX,hf.space
+DOMAIN-SUFFIX,cdn-lfs.huggingface.co
+DOMAIN-SUFFIX,stability.ai
+DOMAIN-SUFFIX,stabilitycdn.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,d.discordapp.net
+DOMAIN-SUFFIX,cdn.discordapp.com
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,runway-research.net
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,replicate.com
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cloudflareapps.com
+DOMAIN-SUFFIX,cloudflarestream.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,fastly.net
+
+
+

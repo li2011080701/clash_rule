@@ -1,0 +1,27 @@
+✅ 规则冲突时，CDN 最终走哪条？（核心逻辑）
+→ 谁排在前面，就用谁。
+→ 第一个匹配成功的规则立即生效，后面的全都忽略。
+无论规则是：
+DOMAIN
+DOMAIN-SUFFIX
+DOMAIN-KEYWORD
+PROCESS-NAME
+IP-CIDR
+GEOIP
+FINAL
+甚至外部 Rule Providers
+
+都是遵循这个原则。
+
+
+🔍 具体匹配顺序（优先级从高到低）
+以下是实际上最常见的优先顺序：
+PROCESS-NAME（按进程匹配）
+DOMAIN（完全匹配）
+DOMAIN-SUFFIX（后缀）
+DOMAIN-KEYWORD（关键词）
+IP-CIDR（IP 段匹配）
+GEOIP（按国家）
+FINAL（兜底规则）
+
+⚠️ 但无论哪一种规则，只要一个规则匹配到了，就不会继续往下匹配。

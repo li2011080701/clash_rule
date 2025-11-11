@@ -1,0 +1,3 @@
+https://github.com/blackmatrix7/ios_rule_script
+
+https://github.geekery.cn/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/proxy/clash-all.ini

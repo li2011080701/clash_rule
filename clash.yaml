@@ -181,7 +181,7 @@ rule-anchor:
 
 rule-providers:
   Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
-  Walmart / Domain: {<<: *domain, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Walmart.list"}
+  Walmart / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Walmart.list"}
   ebay / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/ebay.list"}
   giffgaff / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/giffgaff.list"}
   Paypal / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Paypal.list"}

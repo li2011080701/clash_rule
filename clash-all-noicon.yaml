@@ -67,44 +67,7 @@ dns:
     - +.lan
     - +.local
     - geosite:cn
-# 快猫    
-    - +.km688.ink
-# 火烧 
-    - +.onesubv.site
-    - +.oneyyds.online
-    - +.fengyyds.site
-    - +.onemg.top    
-# 猫耳 
-    - +.chybinc.com
-# BestVPN 
-    - +.invitevp.com
-    - +.vp2.us
-# 小牛
-    - +.xiaoniuyun.cc  
-# 硅谷
-    - +.apple-bing.sbs  
-# 无界
-    - +.bncrcloud.com
-# 冰云
-    - +.xby01.xyz
-# 牛逼   
-    - +.idsduf.com  
-    - +.66jc.top
-# 极速通        
-    - +.gfw.gg
-# 萌狗       
-    - +.moedog.cloud
 
-# 其他     
-    - +.ynhtbank.com
-    - +.qeayr.cn
-    - +.saojc.xyz   
-    - +.sssyun.xyz
-    - +.dler.cloud
-    - +.0tk8a3a1q4t94dler.com    
-    - +.aerianas.top
-    - +.gptacg.top
-    - +.wxda.net
 
 ipv6: true
 
@@ -130,7 +93,7 @@ profile:
 # ========================
 default: &default
   type: select
-  proxies: [直连,所有-手动,所有-自动,香港-自动,台湾-自动,日本-自动,新加坡-自动,韩国-自动,美国-自动,其他-自动,拒绝]
+  proxies: [直连,所有-手动,所有-自动,香港-自动,台湾-自动,日本-自动,新加坡-自动,韩国-自动,美国-自动,英国-自动,印度-自动,其他-自动,拒绝]
 
 proxy-groups:
   - {name: ChatGPT, <<: *default}
@@ -155,6 +118,9 @@ proxy-groups:
   - {name: Apple, <<: *default}
   - {name: Microsoft, <<: *default}
   - {name: Google, <<: *default}
+  - {name: ebay, <<: *default}
+  - {name: giffgaff, <<: *default}
+  - {name: Paypal, <<: *default}
   - {name: Test, <<: *default}
   - {name: 国外, <<: *default}
   - {name: 国内, <<: *default}
@@ -167,7 +133,9 @@ proxy-groups:
   - {name: 新加坡-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"}
   - {name: 韩国-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"}
   - {name: 美国-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"}
-  - {name: 其他-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|UK)).)*$"}
+  - {name: 英国-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(英国|UK|uk)).*$"}
+  - {name: 印度-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(印度)).*$"}
+  - {name: 其他-自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|UK|印度)).)*$"}
 
 # ========================
 # 规则引擎（rules）
@@ -207,6 +175,9 @@ rules:
   - RULE-SET,Nintend / Domain,Game
   - RULE-SET,Google / Domain,Google
   - RULE-SET,Google / IP,Google,no-resolve
+  - RULE-SET,ebay / Domain,ebay
+  - RULE-SET,giffgaff / Domain,giffgaff
+  - RULE-SET,Paypal / Domain,Paypal
   - RULE-SET,Proxy / Domain,国外
   - RULE-SET,Globe / Domain,国外  
   - RULE-SET,Direct / Domain,国内
@@ -224,6 +195,9 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
+  ebay / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/ebay.list"}
+  giffgaff / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/giffgaff.list"}
+  Paypal / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Paypal.list.list"}
   TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
   ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   Claude / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}

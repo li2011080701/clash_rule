@@ -97,6 +97,7 @@ proxy-groups:
   - {name: YouTube, <<: *default}
   - {name: GitHub, <<: *default}
   - {name: TikTok, <<: *default}
+  - {name: Google, <<: *default}
   - {name: Claude, <<: *default}
   - {name: Meta AI, <<: *default}
   - {name: Perplexity, <<: *default}
@@ -141,6 +142,8 @@ rules:
   - RULE-SET,GitHub / Domain,GitHub
   - RULE-SET,Youtube / Domain,YouTube
   - RULE-SET,TikTok / Domain,TikTok
+  - RULE-SET,Google / Domain,Google
+  - RULE-SET,Google / IP,Google,no-resolve
   - RULE-SET,TEST / Domain,Test
   - RULE-SET,Claude / Domain,Claude
   - RULE-SET,Meta AI / Domain,Meta AI
@@ -225,5 +228,6 @@ rule-providers:
   Crunchyroll / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list"}
   Reddit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs"}
   Youtube / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}  
-
+  Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
+  Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 

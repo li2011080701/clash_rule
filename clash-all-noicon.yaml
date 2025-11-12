@@ -115,9 +115,6 @@ proxy-groups:
   - {name: Spotify, <<: *default}
   - {name: Crypto, <<: *default}
   - {name: Amazon, <<: *default}
-  - {name: Apple, <<: *default}
-  - {name: Microsoft, <<: *default}
-  - {name: Google, <<: *default}
   - {name: ebay, <<: *default}
   - {name: giffgaff, <<: *default}
   - {name: Paypal, <<: *default}
@@ -153,9 +150,6 @@ rules:
   - RULE-SET,WhatsApp / Domain,WhatsApp
   - RULE-SET,Facebook / Domain,Facebook
   - RULE-SET,Amazon / Domain,Amazon
-  - RULE-SET,Apple / Domain,Apple
-  - RULE-SET,Apple-CN / Domain,Apple  
-  - RULE-SET,Microsoft / Domain,Microsoft
   - RULE-SET,OKX / Domain,Crypto
   - RULE-SET,Bybit / Domain,Crypto
   - RULE-SET,Binance / Domain,Crypto
@@ -173,8 +167,6 @@ rules:
   - RULE-SET,UBI / Domain,Game
   - RULE-SET,PlayStation / Domain,Game
   - RULE-SET,Nintend / Domain,Game
-  - RULE-SET,Google / Domain,Google
-  - RULE-SET,Google / IP,Google,no-resolve
   - RULE-SET,ebay / Domain,ebay
   - RULE-SET,giffgaff / Domain,giffgaff
   - RULE-SET,Paypal / Domain,Paypal
@@ -212,9 +204,6 @@ rule-providers:
   WhatsApp / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list"}
   Facebook / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs"}
   Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
-  Apple-CN / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs"}
-  Apple / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"} 
-  Microsoft / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
   OKX / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
   Bybit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs"}
   Binance / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
@@ -241,9 +230,6 @@ rule-providers:
   Nvidia / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list"}
   Crunchyroll / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list"}
   Reddit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs"}
-
   Youtube / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}  
-  Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
-  Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
-# GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 

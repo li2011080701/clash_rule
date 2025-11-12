@@ -15,16 +15,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连 
-    
-  牛逼:
-    url: "http://192.168.100.2:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E7%89%9B%E9%80%BC"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连    
+
 
 
 proxies:

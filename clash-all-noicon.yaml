@@ -7,7 +7,7 @@
 proxy-providers:
 
   红杏云:
-    url: "https://106.55.228.246:36666/hxvip?token=99a4d0188deabe2eced30f9d13b582ef"
+    url: "http://192.168.100.2:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E7%BA%A2%E6%9D%8F%E4%BA%91"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
     
   牛逼:
-    url: "https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=1fd69dff793d76edd757061721e90aa3"
+    url: "http://192.168.100.2:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E7%89%9B%E9%80%BC"
     type: http
     interval: 86400
     health-check:

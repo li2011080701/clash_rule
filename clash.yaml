@@ -88,6 +88,7 @@ default: &default
 
 proxy-groups:
   - {name: Amazon, <<: *default}
+  - {name: Walmart, <<: *default}
   - {name: ebay, <<: *default}
   - {name: giffgaff, <<: *default}
   - {name: Paypal, <<: *default}
@@ -129,26 +130,27 @@ proxy-groups:
 # 规则引擎（rules）
 # ========================
 rules:
+  - RULE-SET,Amazon / Domain,Amazon
+  - RULE-SET,Walmart / Domain,Walmart
   - RULE-SET,ebay / Domain,ebay
   - RULE-SET,giffgaff / Domain,giffgaff
   - RULE-SET,Paypal / Domain,Paypal
-  - RULE-SET,TEST / Domain,Test
+  - RULE-SET,Telegram / Domain,Telegram
+  - RULE-SET,Telegram / IP,Telegram,no-resolve
   - RULE-SET,ChatGPT / Domain,ChatGPT
+  - RULE-SET,GitHub / Domain,GitHub
+  - RULE-SET,Youtube / Domain,YouTube
+  - RULE-SET,TikTok / Domain,TikTok
+  - RULE-SET,TEST / Domain,Test
   - RULE-SET,Claude / Domain,Claude
   - RULE-SET,Meta AI / Domain,Meta AI
   - RULE-SET,Perplexity / Domain,Perplexity
-  - RULE-SET,GitHub / Domain,GitHub
-  - RULE-SET,Telegram / Domain,Telegram
-  - RULE-SET,Telegram / IP,Telegram,no-resolve
   - RULE-SET,Twitter / Domain,Twitter(X)
   - RULE-SET,WhatsApp / Domain,WhatsApp
   - RULE-SET,Facebook / Domain,Facebook
-  - RULE-SET,Amazon / Domain,Amazon
   - RULE-SET,OKX / Domain,Crypto
   - RULE-SET,Bybit / Domain,Crypto
   - RULE-SET,Binance / Domain,Crypto
-  - RULE-SET,Youtube / Domain,YouTube
-  - RULE-SET,TikTok / Domain,TikTok
   - RULE-SET,Netflix / Domain,Netflix
   - RULE-SET,Netflix / IP,Netflix,no-resolve
   - RULE-SET,Disney / Domain,Disney
@@ -178,6 +180,8 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
+  Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
+  Walmart / Domain: {<<: *domain, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Walmart.list"}
   ebay / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/ebay.list"}
   giffgaff / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/giffgaff.list"}
   Paypal / Domain: {<<: *class, url: "https://raw.githubusercontent.com/li2011080701/clash_rule/refs/heads/main/list/Paypal.list"}
@@ -194,7 +198,6 @@ rule-providers:
   Twitter / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
   WhatsApp / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list"}
   Facebook / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs"}
-  Amazon / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs"}
   OKX / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
   Bybit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs"}
   Binance / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}

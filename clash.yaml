@@ -7,7 +7,7 @@
 proxy-providers:
 
   红杏云:
-    url: "https://43.139.213.75:9000/hxyunvip?token=30ae3794a8cea22d46c3fe4a8bf15a34"
+    url: "https://43.139.213.75:9000/hxyunvip?token=cc72ac203b5b4be626f88c9788fd98cf"
     type: http
     interval: 86400
     health-check:

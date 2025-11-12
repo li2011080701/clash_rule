@@ -7,7 +7,7 @@
 proxy-providers:
 
   红杏云:
-    url: "http://192.168.100.2:3008/T3B9dgzBzdRbBF8Aqx7P/download/%E7%BA%A2%E6%9D%8F%E4%BA%91"
+    url: "https://43.139.213.75:9000/hxyunvip?token=30ae3794a8cea22d46c3fe4a8bf15a34"
     type: http
     interval: 86400
     health-check:
